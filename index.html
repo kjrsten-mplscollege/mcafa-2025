@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link href="styles.css" rel="stylesheet" />
+    <link href="lightbox.css" rel="stylesheet" />
   </head>
   <body>
     <h1>
@@ -18,10 +19,13 @@
     </h1>
     <div class="gallery">
       <div class="student">
-        <img
-          src="images/francesca-hopkins-IMG_0549.jpg"
-          alt="francesca-hopkins"
-        />
+        
+        <!-- KJRSTEN'S CODE START -->
+        <a class="lightbox" href="#img1">
+            <img src="images/francesca-hopkins-IMG_0549.jpg" alt="francesca-hopkins"/>
+        </a> 
+        <!-- KJRSTEN'S CODE END -->
+
         <p>
           <strong>Francesca Hopkins</strong><br /><a
             href="https://francesca-hopkins.carrd.co"
@@ -80,6 +84,15 @@
         </p>
       </div>
     </div>
+
+    <!-- KJRSTEN'S CODE START -->
+    <div class="lightbox-target" id="img1">
+        <img src="images/francesca-hopkins-IMG_0549.jpg" alt="francesca-hopkins"/>
+        <a class="lightbox-close" href="#"></a>
+    </div>
+    <!-- KJRSTEN'S CODE END -->
+
+
     <div class="dog-crop-box">
       <img src="images/dog1.png" alt="toy dog" class="dog-image" />
     </div>
