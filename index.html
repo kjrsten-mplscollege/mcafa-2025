@@ -14,9 +14,15 @@
     <link href="lightbox.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>
-      Minneapolis College 2025<br />Associates of Fine Arts Portfolio Exhibition
-    </h1>
+    <section class="postcard">
+      <div class="postcard-overlay">
+        <h1>
+          Minneapolis College 2025<br />Associates of Fine Arts Portfolio
+          Exhibition
+        </h1>
+      </div>
+    </section>
+
     <div class="gallery">
       <div class="student">
         <!-- KJRSTEN'S CODE START -->
@@ -39,10 +45,12 @@
         </p>
       </div>
       <div class="student">
-        <img
-          src="images/nancy-c-h-Mile & Gwen printmaking (Rice sheet) Spring semester 2025.jpg"
-          alt="nancy-c-h-Mile"
-        />
+        <a class="lightbox" href="#img2">
+          <img
+            src="images/nancy-c-h-Mile & Gwen printmaking (Rice sheet) Spring semester 2025.jpg"
+            alt="nancy-c-h-Mile"
+          />
+        </a>
         <p>
           <strong>Nancy D. Cuautle Hernandez</strong><br /><a
             href="https://nancycuautlehdz.carrd.co"
@@ -52,7 +60,9 @@
         </p>
       </div>
       <div class="student">
-        <img src="images/roni-osgood-P1000039.JPG" alt="roni-osgood" />
+        <a class="lightbox" href="#img3">
+          <img src="images/roni-osgood-P1000039.JPG" alt="roni-osgood" />
+        </a>
         <p>
           <strong>Roni Osgood</strong><br /><a
             href="https://roni.crd.co"
@@ -62,10 +72,12 @@
         </p>
       </div>
       <div class="student">
-        <img
-          src="images/camille-branham-ComoConserv_01_03.jpg"
-          alt="Camille Branham artwork"
-        />
+        <a class="lightbox" href="#img4">
+          <img
+            src="images/camille-branham-ComoConserv_01_03.jpg"
+            alt="Camille Branham artwork"
+          />
+        </a>
         <p>
           <strong>Camille Branham</strong><br /><a
             href="https://bte.media/galleries/lostandfound"
@@ -75,10 +87,12 @@
         </p>
       </div>
       <div class="student">
-        <img
-          src="images/simpson_bighead.jpg"
-          alt="Chloe McClaren-Simpson artwork"
-        />
+        <a class="lightbox" href="#img5">
+          <img
+            src="images/simpson_bighead.jpg"
+            alt="Chloe McClaren-Simpson artwork"
+          />
+        </a>
         <p>
           <strong>Chloe McClaren-Simpson</strong><br /><a
             href="https://yuckfest.carrd.co"
@@ -99,8 +113,83 @@
     </div>
     <!-- KJRSTEN'S CODE END -->
 
+    <div class="lightbox-target" id="img2">
+      <img
+        src="images/nancy-c-h-Mile & Gwen printmaking (Rice sheet) Spring semester 2025.jpg"
+        alt="nancy-c-h-Mile"
+      />
+      <a class="lightbox-close" href="#"></a>
+    </div>
+
+    <div class="lightbox-target" id="img3">
+      <img src="images/roni-osgood-P1000039.JPG" alt="roni-osgood" />
+      <a class="lightbox-close" href="#"></a>
+    </div>
+
+    <div class="lightbox-target" id="img4">
+      <img
+        src="images/camille-branham-ComoConserv_01_03.jpg"
+        alt="Camille Branham artwork"
+      />
+      <a class="lightbox-close" href="#"></a>
+    </div>
+
+    <div class="lightbox-target" id="img5">
+      <img
+        src="images/simpson_bighead.jpg"
+        alt="Chloe McClaren-Simpson artwork"
+      />
+      <a class="lightbox-close" href="#"></a>
+    </div>
+
+    <div class="student-dog-wrapper">
+      <section class="student-links">
+        <h3>2025 Graduate Students</h3>
+        <ul>
+          <li>
+            <a href="https://francesca-hopkins.carrd.co">Francesca Hopkins</a>
+          </li>
+          <li>
+            <a href="https://nancycuautlehdz.carrd.co"
+              >Nancy Cuautle Hernandez</a
+            >
+          </li>
+          <li>
+            <a href="https://roni.crd.co">Roni Osgood</a>
+          </li>
+          <li>
+            <a href="https://bte.media/galleries/lostandfound"
+              >Camille Branham</a
+            >
+          </li>
+          <li>
+            <a href="https://yuckfest.carrd.co">Chloe McClaren-Simpson</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
     <div class="dog-crop-box">
       <img src="images/dog1.png" alt="toy dog" class="dog-image" />
     </div>
+
+    <footer class="site-footer">
+      <p>
+        &copy; 2025
+        <a
+          href="https://minneapolis.edu/academics/school-design-and-arts"
+          target="_blank"
+          >Minneapolis College – School of Design and the Arts</a
+        >
+      </p>
+
+      <a href="https://minneapolis.edu/" target="_blank">
+        <img
+          src="images/mc-logo-black.svg"
+          alt="mctc logo link"
+          class="footer-icon"
+        />
+      </a>
+    </footer>
   </body>
 </html>

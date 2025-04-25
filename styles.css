@@ -1,75 +1,207 @@
+html,
 body {
-    background-color: #f6eee0;
-  }
-  
-  h1 {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings: "width" 100;
-    color: #5c0129;
-    text-align: center;
-    margin-top: 40px;
-  }
-  
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #f6eee0;
+}
+
+.postcard {
+  position: relative;
+  background: url("images/AFA_Postcard_04.jpg") no-repeat center center;
+  background-size: cover;
+  height: 500px;
+}
+
+.postcard-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 6px 20px;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(246, 238, 224, 0) 0%,
+    #f6eee0 100%
+  );
+  font-family: "Sour Gummy", sans-serif;
+  color: #5c0129;
+}
+
+h1 {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "width" 100;
+  color: #5c0129;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.student {
+  text-align: center;
+  background: transparent;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.student img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+}
+
+.student p {
+  margin: 0;
+  font-weight: 500;
+  color: #444444;
+  line-height: 1.4;
+}
+
+.student a {
+  color: #5c0129;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.student a:hover {
+  text-decoration: underline;
+}
+
+.dog-crop-box {
+  width: 600px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: -100px;
+  position: relative;
+  z-index: 1;
+}
+
+.dog-image {
+  width: auto;
+  max-width: none;
+  display: block;
+  transform: translateX(30px);
+}
+
+.site-footer {
+  background-color: #5c0129;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-family: "Playpen Sans", cursive;
+  font-size: 0.95rem;
+  margin-top: 60px;
+}
+
+.site-footer a {
+  color: #f6eee0;
+  text-decoration: underline;
+}
+
+.footer-icon {
+  width: 36;
+  height: auto;
+  margin-top: 10px;
+  transition: transform 0.3 ease;
+}
+
+.student-dog-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+  gap: 40px;
+}
+
+.student-links {
+  flex: 1;
+  max-width: 300px;
+  color: #5c0129;
+  font-family: "Playpen Sans", cursive;
+}
+
+.student-links h3 {
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.student-links ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.student-links li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.student-links a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #5c0129;
+  transition: all 0.2 ease;
+}
+
+.student-links a:hover {
+  color: #5c0129;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
   .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    max-width: 1000px;
-    margin: 40px auto;
+    grid-template-columns: 1fr;
+    gap: 32px;
     padding: 0 20px;
   }
-  
+
   .student {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .student-links {
     text-align: center;
-    background: transparent;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    padding: 16px;
-    border-radius: 10px;
-    box-shadow: none;
+    max-width: 100%;
   }
-  
-  .student img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
-  }
-  
-  .student p {
-    margin: 0;
-    font-weight: 500;
-    color: #444444;
-    line-height: 1.4;
-  }
-  
-  .student a {
-    color: #5c0129;
-    text-decoration: none;
-    font-size: 0.95rem;
-  }
-  
-  .student a:hover {
-    text-decoration: underline;
-  }
-  
+
   .dog-crop-box {
-    width: 320px;
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: 0;
-    margin-top: 30px;
+    width: 100%;
+    margin: 30px auto 0;
+    overflow: visible;
+    text-align: center;
   }
-  
+
   .dog-image {
-    width: auto;
-    max-width: none;
-    display: block;
-    transform: translateX(0);
+    max-width: 70%;
+    transform: translate(0);
   }
-  
+
+  .student-links {
+    text-align: center;
+    max-width: 100%;
+  }
+}
