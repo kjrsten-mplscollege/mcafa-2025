@@ -197,7 +197,53 @@ body {
   text-decoration: underline;
 }
 
-/* === MOBILE RESPONSIVE STYLES === */
+/* Mobile phones (portrait) - up to 480px */
+@media (max-width: 480px) {
+  .postcard {
+    height: 360px;
+    background-position: center top;
+  }
+
+  .postcard-overlay {
+    padding: 6px 20px;
+    text-align: center;
+  }
+
+  .postcard-overlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 0 20px;
+  }
+
+  .student {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .dog-crop-box {
+    width: 100%;
+    margin: 0 auto;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+  }
+
+  .dog-image {
+    max-width: 70%;
+    transform: translate(0);
+  }
+
+  .student-links {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+/* Tablets (landscape and portrait) - up to 768px */
 @media (max-width: 768px) {
   .postcard {
     height: 360px;
