@@ -7,38 +7,58 @@ body {
   background-color: #f6eee0;
 }
 
+/* === HERO POSTCARD SECTION === */
 .postcard {
   position: relative;
-  background: url("images/AFA_Postcard_04.jpg") no-repeat center center;
+  background: linear-gradient(
+      to bottom,
+      rgba(246, 238, 224, 0) 70%,
+      #f6eee0 100%
+    ),
+    url("images/AFA_Postcard_04.jpg") no-repeat center center;
   background-size: cover;
   height: 500px;
 }
 
 .postcard-overlay {
   position: absolute;
-  bottom: 0;
+  bottom: -60px; /* anchors it to the bottom of the postcard */
   width: 100%;
-  padding: 6px 20px;
+  padding: 80px 20px 20px 20px;
   text-align: center;
   background: linear-gradient(
     to bottom,
     rgba(246, 238, 224, 0) 0%,
     #f6eee0 100%
   );
-  font-family: "Sour Gummy", sans-serif;
+  font-family: "Playpen Sans", sans-serif;
   color: #5c0129;
 }
 
-h1 {
-  font-family: "Sour Gummy", sans-serif;
+/*.postcard-overlay h1 {
+  font-family: "Playpen Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "width" 100;
   color: #5c0129;
   text-align: center;
-  margin-top: 40px;
+  font-size: 2rem;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0 10px;
+}
+*/
+.postcard-overlay h1 {
+  font-family: "Playpen Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "width" 100;
+  color: #5c0129;
+  text-align: center;
+  margin-top: 0px;
 }
 
+/* === GALLERY SECTION === */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -51,7 +71,7 @@ h1 {
 .student {
   text-align: center;
   background: transparent;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Playpen Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   padding: 16px;
@@ -85,6 +105,7 @@ h1 {
   text-decoration: underline;
 }
 
+/* === DOG IMAGE SECTION === */
 .dog-crop-box {
   width: 600px;
   overflow: hidden;
@@ -102,31 +123,33 @@ h1 {
   transform: translateX(30px);
 }
 
+/* === FOOTER === */
 .site-footer {
   background-color: #5c0129;
   color: #fff;
   text-align: center;
   padding: 20px 0;
-  font-family: "Playpen Sans", cursive;
+  font-family: "Quicksand", cursive;
   font-size: 0.95rem;
   margin-top: 60px;
 }
 
 .site-footer a {
   color: #f6eee0;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .footer-icon {
-  width: 36;
+  width: 36px;
   height: auto;
   margin-top: 10px;
-  transition: transform 0.3 ease;
+  transition: transform 0.3s ease;
 }
 
+/* === STUDENT LINKS NEXT TO DOG === */
 .student-dog-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   flex-wrap: nowrap;
   max-width: 1200px;
@@ -139,12 +162,16 @@ h1 {
   flex: 1;
   max-width: 300px;
   color: #5c0129;
-  font-family: "Playpen Sans", cursive;
+  font-family: "Playpen Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wght" 400;
 }
 
-.student-links h3 {
-  font-family: "Sour Gummy", sans-serif;
+.student-links strong {
+  font-family: "Playpen Sans", sans-serif;
   font-size: 1.4rem;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
@@ -161,8 +188,8 @@ h1 {
 .student-links a {
   color: #000;
   text-decoration: none;
-  border-bottom: 1px solid #5c0129;
-  transition: all 0.2 ease;
+  border-bottom: none;
+  transition: color 0.2s ease;
 }
 
 .student-links a:hover {
@@ -170,9 +197,23 @@ h1 {
   text-decoration: underline;
 }
 
+/* === MOBILE RESPONSIVE STYLES === */
 @media (max-width: 768px) {
+  .postcard {
+    height: 360px;
+    background-position: center top;
+  }
+
+  .postcard-overlay {
+    padding: 6px 20px;
+    text-align: center;
+  }
+
+  .postcard-overlay h1 {
+    font-size: 1.5rem;
+  }
+
   .gallery {
-    display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
     padding: 0 20px;
@@ -183,16 +224,12 @@ h1 {
     margin: 0 auto;
   }
 
-  .student-links {
-    text-align: center;
-    max-width: 100%;
-  }
-
   .dog-crop-box {
     width: 100%;
-    margin: 30px auto 0;
+    margin: 0 auto;
     overflow: visible;
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 
   .dog-image {
