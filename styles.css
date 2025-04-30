@@ -22,7 +22,7 @@ body {
 
 .postcard-overlay {
   position: absolute;
-  bottom: -60px; /* anchors it to the bottom of the postcard */
+  bottom: -170px; /* anchors it to the bottom of the postcard */
   width: 100%;
   padding: 80px 20px 20px 20px;
   text-align: center;
@@ -35,6 +35,9 @@ body {
   color: #5c0129;
 }
 
+#lost-and-found {
+  width: 50%;
+}
 /*.postcard-overlay h1 {
   font-family: "Playpen Sans", sans-serif;
   font-optical-sizing: auto;
@@ -65,8 +68,9 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   max-width: 1000px;
-  margin: 40px auto;
+  margin: 190px auto;
   padding: 0 20px;
+  margin-bottom: 50px;
 }
 
 .student {
@@ -250,14 +254,21 @@ body {
 
 /* Tablets (landscape and portrait) - up to 768px */
 @media (max-width: 768px) {
+  #lost-and-found {
+    width: 80%;
+  }
+
   .postcard {
     height: 360px;
     background-position: center top;
+    bottom: 0;
   }
 
   .postcard-overlay {
     padding: 0;
     text-align: center;
+    top: 300px;
+    height: 170px;
   }
 
   .postcard-overlay h1 {
@@ -268,6 +279,8 @@ body {
     grid-template-columns: 1fr;
     gap: 32px;
     padding: 0 20px;
+    margin-top: 110px;
+    margin-bottom: 50px;
   }
 
   .student {
